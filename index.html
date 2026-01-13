@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RISHE | Portfolio</title>
+  <meta name="description" content="ポートフォリオ（Unity / C#）。作品紹介、技術、制作方針。" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <a class="skip" href="#main">本文へスキップ</a>
+
+  <header class="header">
+    <div class="container header__inner">
+      <div class="brand">
+        <span class="brand__mark" aria-hidden="true">◆</span>
+        <span class="brand__name">佐藤 結叶(Sato Yuito)</span>
+      </div>
+
+      <nav class="nav" aria-label="ページ内ナビゲーション">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#works">Works</a>
+        <a href="#policy">Policy</a>
+        <a href="#links">Links</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="badge">New Grad / Unity Game Programmer</p>
+          <h1 class="hero__title">
+            Unity（C#）で<br class="br-sp" />
+            2Dゲーム開発をしています
+          </h1>
+          <p class="hero__lead">
+            仕様設計から実装・デバッグまで一貫して取り組んできました。<br />
+            物理挙動や入力の気持ちよさを意識して、再現性のある実装を大切にしています。
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn" href="#works">作品を見る</a>
+            <a class="btn btn--ghost" href="#links">連絡先 / GitHub</a>
+          </div>
+
+          <dl class="meta">
+            <div class="meta__row">
+              <dt>Focus</dt><dd>Unity / C# / 2D / Physics / UI</dd>
+            </div>
+            <div class="meta__row">
+              <dt>Wanted</dt><dd>ゲームプログラマ（新卒）</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__card" aria-label="サマリーカード">
+          <h2 class="card__title">Summary</h2>
+          <ul class="check">
+            <li>仕様の言語化 → 実装まで落とし込む</li>
+            <li>Rigidbody2D/Colliderで物理挙動を設計</li>
+            <li>Input System / UI / シーン管理</li>
+            <li>GitHubで成果物を整理</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__head">
+          <h2>About</h2>
+          <p>短く、何者かが伝わる文章にしています。</p>
+        </div>
+
+        <div class="panel">
+          <p>
+            Unity（C#）を中心に、2Dゲームの個人制作に取り組んでいます。
+            実装前に仕様を整理し、条件分岐や例外ケースを想定した上で作ることを重視しています。
+            不具合が出た際は、ログ出力やInspectorで原因を切り分け、再現性のある修正を行います。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section__head">
+          <h2>Skills</h2>
+          <p>盛らずに、できることを具体的に。</p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card">
+            <h3>Language / Engine</h3>
+            <ul class="list">
+              <li>C#（Unity）</li>
+              <li>C++（基礎）</li>
+              <li>Unity（2D）</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Game Development</h3>
+            <ul class="list">
+              <li>Rigidbody2D / Collider2D</li>
+              <li>Tilemap / Raycast</li>
+              <li>Input System</li>
+              <li>UI（ゲージ / ボタン / 遷移）</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Tools</h3>
+            <ul class="list">
+              <li>Visual Studio</li>
+              <li>Git / GitHub（基本操作）</li>
+              <li>Unity Build / デバッグ対応</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Works -->
+    <section class="section" id="works">
+      <div class="container">
+        <div class="section__head">
+          <h2>Works</h2>
+        </div>
+
+        <!-- Work 01 -->
+        <article class="work">
+          <div class="work__media" aria-label="作品の画像/動画">
+            <!-- 画像 or GIF を置く（例: ./assets/work1.gif） -->
+            <div class="media__placeholder">
+              <!--<p>Work 01 Media</p>
+              <small>ここにGIF/画像（16:9推奨）</small>-->
+            </div>
+          </div>
+
+          <div class="work__body">
+            <div class="work__top">
+              <h3 class="work__title">棒を伸ばして渡る2Dパズルゲーム（Unity）</h3>
+              <span class="tag">Main</span>
+            </div>
+
+            <p class="work__desc">
+              ボタン長押しで棒の長さを操作し、対岸に渡る横スクロール型ゲーム。
+              入力タイミングと物理挙動が結果に直結するよう、仕様段階から設計しました。
+            </p>
+
+            <div class="work__cols">
+              <div>
+                <h4>Tech</h4>
+                <ul class="list">
+                  <li>長押し入力で伸縮ループ → 離した瞬間に確定</li>
+                  <li>Rigidbody2Dで棒が倒れる挙動</li>
+                  <li>届かない場合は落下する条件分岐</li>
+                  <li>摩擦/重力を調整してゲーム性に反映</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Role / Period</h4>
+                <ul class="list">
+                  <li>個人制作</li>
+                  <li>期間：</li>
+                  <li>担当：仕様 / 実装 / UI / 調整</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="work__links">
+              <a class="btn btn--small btn--ghost" href="#" target="_blank" rel="noreferrer">Play / Movie</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Work 02 -->
+        <article class="work">
+          <div class="work__media" aria-label="作品の画像/動画">
+            <div class="media__placeholder">
+              <!--<p>Work 02 Media</p>
+              <small>ここにGIF/画像（16:9推奨）</small>-->
+            </div>
+          </div>
+
+          <div class="work__body">
+            <div class="work__top">
+              <h3 class="work__title">telepOrtatiOn（Unity）</h3>
+              <span class="tag tag--sub">Sub</span>
+            </div>
+
+            <p class="work__desc">
+              Raycastを用いた判定処理とTilemap連携を用いて、ギミック要素を実装しました。
+              処理の責務分離と、Inspectorでの設定しやすさを意識しています。
+            </p>
+
+            <div class="work__cols">
+              <div>
+                <h4>Tech</h4>
+                <ul class="list">
+                  <li>Raycastで衝突検知</li>
+                  <li>Tilemap参照 / LayerMask運用</li>
+                  <li>パラメータをSerializeFieldで調整可能に</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Role / Period</h4>
+                <ul class="list">
+                  <li>チーム制作</li>
+                  <li>期間：3ヶ月</li>
+                  <li>担当：実装 / デバッグ</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Policy -->
+    <section class="section" id="policy">
+      <div class="container">
+        <div class="section__head">
+          <h2>Development Policy</h2>
+        </div>
+
+        <div class="panel">
+          <ul class="list">
+            <li>実装前に仕様を整理し、例外ケースを想定してから着手します。</li>
+            <li>不具合は再現条件を固定し、ログ出力やInspectorで原因を切り分けます。</li>
+            <li>調整しやすいように、SerializeFieldでパラメータ化することを意識しています。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Links -->
+    <section class="section" id="links">
+      <div class="container">
+        <div class="section__head">
+          <h2>Links</h2>
+        </div>
+
+        <div class="grid grid--2">
+          <div class="card">
+            <h3>GitHub</h3>
+            <a class="btn btn--small" href="#" target="_blank" rel="noreferrer"></a>
+          </div>
+
+          <div class="card">
+            <h3>Contact</h3>
+            <p class="muted">メール or フォームどちらでもOK。</p>
+            <ul class="list">
+              <li>Email:<a href="yuity0804@gmail.com">yuity0804@gmail.com</a></li>
+              <!--<li>X():<a href="#" target="_blank" rel="noreferrer"></a></li>-->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <small>© <span id="year"></span> RISHE</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
