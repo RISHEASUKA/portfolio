@@ -285,34 +285,23 @@
               <span class="tag tag--sub">Sub</span>
             </div>
 
-            <p class="work__desc">
-              自分の形を伸縮させ,迫りくる障害物を避けながらフィールドに散らばる欠片を集めていくパズルアクションゲームです。
-            </p>
-
-            <p class="work__desc">
-              ColliderのOnCollisionに頼らず、オブジェクトの四隅の座標を用いて重なり判定を行う処理を実装しました。
-               タイルやオブジェクトと重なった場合は対象を削除する仕様です。
-              </p>
-
-              <div class="work__cols">
-                <div>
-                  <h4>Approach</h4>
-                  <ul class="list">
-                    <li>SpriteのBoundsから四隅のワールド座標を取得</li>
-                    <li>各点でOverlapPoint / Tile判定を実行</li>
-                    <li>1点でも重なっていればヒット扱い</li>
-                    <li>条件成立時にオブジェクトを削除</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4>Purpose</h4>
-                  <ul class="list">
-                    <li>当たり判定の仕組み理解</li>
-                    <li>Collider依存を避けた制御</li>
-                    <li>処理の軽量化・明示的判定</li>
-                  </ul>
-                </div>
+            <div class="work__cols">
+              <div>
+                <h4>Approach</h4>
+                <ul class="list">
+                  <li>SpriteのBoundsから四隅のワールド座標を取得</li>
+                  <li>各点でOverlapPoint / Tile判定を実行</li>
+                  <li>1点でも重なっていればヒット扱い</li>
+                  <li>条件成立時にオブジェクトを削除</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Purpose</h4>
+                <ul class="list">
+                  <li>当たり判定の仕組み理解</li>
+                  <li>Collider依存を避けた制御</li>
+                  <li>処理の軽量化・明示的判定</li>
+                </ul>
               </div>
             </div>
           </div>
