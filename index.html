@@ -132,7 +132,90 @@
         <div class="section__head">
           <h2>Works</h2>
         </div>
+        <!-- Work 04 -->
+        <article class="work">
+          <div class="work__media" aria-label="作品の画像/動画">
+            <div class="media__placeholder">
+              <img
+              src="./img/NyoiBoxSN (1).png"
+              class="work__img"
+              /><!--画像貼るとこ-->
+            </div>
+          </div>
 
+          <div class="work__body">
+            <div class="work__top">
+              <h3 class="work__title">NyoiBox（Unity）</h3>
+              <span class="tag tag--sub">Sub</span>
+            </div>
+            <div class="work__cols">
+              <div>
+                <h4>Approach</h4>
+                <ul class="list">
+                  <li>SpriteのBoundsから四隅のワールド座標を取得</li>
+                  <li>各点でOverlapPoint / Tile判定を実行</li>
+                  <li>1点でも重なっていればヒット扱い</li>
+                  <li>条件成立時にオブジェクトを削除</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Purpose</h4>
+                <ul class="list">
+                  <li>当たり判定の仕組み理解</li>
+                  <li>Collider依存を避けた制御</li>
+                  <li>処理の軽量化・明示的判定</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="work">
+          <div class="work__media" aria-label="作品の画像/動画">
+            <div class="work__media work__media--two">
+              <img
+              src="./img/TPimg.png"
+              class="work__img"
+              />
+              <img
+              src="./img/TPimg2.png"
+              class="work__img"
+              />
+            </div>
+            </div>
+          </div>
+
+          <div class="work__body">
+            <div class="work__top">
+              <h3 class="work__title">telepOrtatiOn（Unity）</h3>
+              <span class="tag tag--sub">Sub</span>
+            </div>
+
+            <p class="work__desc">
+              Raycastを用いた判定処理とTilemap連携を用いて、ギミック要素を実装しました。
+              処理の責務分離と、Inspectorでの設定しやすさを意識しています。
+            </p>
+
+            <div class="work__cols">
+              <div>
+                <h4>Tech</h4>
+                <ul class="list">
+                  <li>Raycastで衝突検知</li>
+                  <li>Tilemap参照 / LayerMask運用</li>
+                  <li>パラメータをSerializeFieldで調整可能に</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Role / Period</h4>
+                <ul class="list">
+                  <li>チーム制作</li>
+                  <li>期間：3ヶ月</li>
+                  <li>担当：実装 / デバッグ</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
         <!-- Works 01 -->
         <article class="work">
           <div class="work__media" aria-label="作品の画像/動画">
@@ -177,7 +260,7 @@
             </div>
 
             <div class="work__links">
-              <a class="btn btn--small btn--ghost" href="#" target="_blank" rel="noreferrer">Play / Movie</a>
+              <a class="btn btn--small btn--ghost" href="./Movie/NyoiBox紹介動画.mp4" target="_blank" rel="noreferrer">Play / Movie</a>
             </div>
           </div>
         </article>
@@ -232,86 +315,7 @@
         </article>
 
         <!-- Work 03 -->
-        <article class="work">
-          <div class="work__media" aria-label="作品の画像/動画">
-            <div class="media__placeholder">
-              <img
-              src="./img/TPimg.png"
-              class="work__img"
-              />
-            </div>
-            </div>
-          </div>
-
-          <div class="work__body">
-            <div class="work__top">
-              <h3 class="work__title">telepOrtatiOn（Unity）</h3>
-              <span class="tag tag--sub">Sub</span>
-            </div>
-
-            <p class="work__desc">
-              Raycastを用いた判定処理とTilemap連携を用いて、ギミック要素を実装しました。
-              処理の責務分離と、Inspectorでの設定しやすさを意識しています。
-            </p>
-
-            <div class="work__cols">
-              <div>
-                <h4>Tech</h4>
-                <ul class="list">
-                  <li>Raycastで衝突検知</li>
-                  <li>Tilemap参照 / LayerMask運用</li>
-                  <li>パラメータをSerializeFieldで調整可能に</li>
-                </ul>
-              </div>
-              <div>
-                <h4>Role / Period</h4>
-                <ul class="list">
-                  <li>チーム制作</li>
-                  <li>期間：3ヶ月</li>
-                  <li>担当：実装 / デバッグ</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Work 04 -->
-        <article class="work">
-          <div class="work__media" aria-label="作品の画像/動画">
-            <div class="media__placeholder">
-              <img
-              src="./img/NyoiBoxSN (1).png"
-              class="work__img"
-              /><!--画像貼るとこ-->
-            </div>
-          </div>
-
-          <div class="work__body">
-            <div class="work__top">
-              <h3 class="work__title">NyoiBox（Unity）</h3>
-              <span class="tag tag--sub">Sub</span>
-            </div>
-            <div class="work__cols">
-              <div>
-                <h4>Approach</h4>
-                <ul class="list">
-                  <li>SpriteのBoundsから四隅のワールド座標を取得</li>
-                  <li>各点でOverlapPoint / Tile判定を実行</li>
-                  <li>1点でも重なっていればヒット扱い</li>
-                  <li>条件成立時にオブジェクトを削除</li>
-                </ul>
-              </div>
-              <div>
-                <h4>Purpose</h4>
-                <ul class="list">
-                  <li>当たり判定の仕組み理解</li>
-                  <li>Collider依存を避けた制御</li>
-                  <li>処理の軽量化・明示的判定</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </article>
+        
       </div>
     </section>
 
