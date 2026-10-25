@@ -1,379 +1,149 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>佐藤結叶 | Portfolio</title>
-  <meta name="description" content="ポートフォリオ（Unity / C#）。作品紹介、技術、制作方針。" />
-  <link rel="stylesheet" href="./style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d15">
+  <meta name="description" content="佐藤結叶のゲームプログラマ向けポートフォリオ。Unity / C#、Unreal Engine / C++、Goを用いたゲーム制作を紹介しています。">
+  <title>佐藤 結叶 | Game Programmer Portfolio</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
 </head>
-
 <body>
-  <a class="skip" href="#main">本文へスキップ</a>
+  <a class="skip-link" href="#main">本文へスキップ</a>
 
-  <header class="header">
-    <div class="container header__inner">
-      <div class="brand">
-        <span class="brand__mark" aria-hidden="true">◆</span>
-        <span class="brand__name">佐藤 結叶(Sato Yuito)</span>
-      </div>
-
-      <nav class="nav" aria-label="ページ内ナビゲーション">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#works">Works</a>
-        <a href="#policy">Policy</a>
-        <a href="#links">Links</a>
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="site-logo" href="#top" aria-label="トップへ戻る">
+        <span class="site-logo__symbol" aria-hidden="true">YS<span class="accent">.</span></span>
+        <span class="site-logo__name">YUITO SATO <small>GAME PROGRAMMER</small></span>
+      </a>
+      <nav class="site-nav" aria-label="メインナビゲーション">
+        <a href="#works">WORKS</a>
+        <a href="#skills">SKILLS</a>
+        <a href="#about">ABOUT</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container hero__inner">
-        <div class="hero__text">
-          <p class="badge">New Grad / Unity Game Programmer</p>
-          <h1 class="hero__title">
-            Unity（C#）で<br class="br-sp" />
-            2Dゲーム開発をしています
-          </h1>
-          <p class="hero__lead">
-            仕様設計から実装・デバッグまで一貫して取り組んできました。<br />
-            物理挙動や入力の気持ちよさを意識して、再現性のある実装を大切にしています。
-          </p>
-
-          <div class="hero__cta">
-            <a class="btn" href="#works">作品を見る</a>
-            <!--<a class="btn btn--ghost" href="#links">連絡先 / GitHub</a> -->
-          </div>
-
-          <dl class="meta">
-            <div class="meta__row">
-              <dt>Focus</dt><dd>Unity / C# / 2D / Physics / UI</dd>
-            </div>
-            <div class="meta__row">
-              <dt>Wanted</dt><dd>ゲームプログラマ（新卒）</dd>
-            </div>
-          </dl>
+    <section id="top" class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="eyebrow"><span class="eyebrow__line"></span> PORTFOLIO / GAME PROGRAMMER</p>
+        <h1 id="hero-title">仕組みを考え、<br><span class="gradient-text">遊びをつくる。</span></h1>
+        <p class="hero__description">Unityを中心に、C#・C++・Goを使ってゲーム制作に取り組んでいます。操作感や物理挙動、拡張性を意識しながら、仕様設計から実装・デバッグまで経験を積んでいます。</p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#works">制作作品を見る <span aria-hidden="true">↗</span></a>
+          <a class="button button--outline" href="#skills">使用技術を見る <span aria-hidden="true">↓</span></a>
         </div>
-
-        <div class="hero__card" aria-label="サマリーカード">
-          <h2 class="card__title">Summary</h2>
-          <ul class="check">
-            <li>仕様の言語化 → 実装まで落とし込む</li>
-            <li>Rigidbody2D/Colliderで物理挙動を設計</li>
-            <li>Input System / UI / シーン管理</li>
-            <li>GitHubで成果物を整理</li>
-          </ul>
+        <div class="hero__meta" aria-label="プロフィール概要">
+          <div><span>ROLE</span><strong>Game Programmer</strong></div>
+          <div><span>MAIN TOOLS</span><strong>Unity / UE5 / Visual Studio</strong></div>
+          <div><span>FOCUS</span><strong>Gameplay / Physics / UI</strong></div>
         </div>
       </div>
+      <figure class="hero__visual">
+        <div class="hero__visual-top"><span class="live-dot" aria-hidden="true"></span> SELECTED WORK <span>01 / 05</span></div>
+        <img src="./assets/img/dungeon-cards.png" alt="Dungeon Cardsのカード選択画面。攻撃、回避、回復ボタンと3種類のカードが並ぶ" width="1536" height="1024" fetchpriority="high">
+        <figcaption><span><strong>Dungeon Cards</strong><small>Turn-based Card Game / Unity</small></span><a href="#dungeon-cards" aria-label="Dungeon Cardsの作品詳細へ">↗</a></figcaption>
+      </figure>
+      <div class="hero__number" aria-hidden="true">01 / BUILD & PLAY</div>
     </section>
 
-    <!-- About -->
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section__head">
-          <h2>About</h2>
+    <section id="works" class="section section--works">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><p class="section-kicker">01 — SELECTED PROJECTS</p><h2>制作作品<span class="accent">.</span></h2></div>
+          <p>ゲームの内容だけでなく、<br>実装した仕組みや工夫も紹介します。</p>
         </div>
 
-        <div class="panel">
-          <p>
-            Unity（C#）を中心に、2Dゲームの個人制作に取り組んでいます。
-            実装前に仕様を整理し、条件分岐や例外ケースを想定した上で作ることを重視しています。
-            不具合が出た際は、ログ出力やInspectorで原因を切り分け、再現性のある修正を行います。
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section class="section" id="skills">
-      <div class="container">
-        <div class="section__head">
-          <h2>Skills</h2>
-        </div>
-
-        <div class="grid grid--3">
-          <article class="card">
-            <h3>Language / Engine</h3>
-            <ul class="list">
-              <li>C#（Unity）</li>
-              <li>C++（基礎）</li>
-              <li>Unity（2D）</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>Game Development</h3>
-            <ul class="list">
-              <li>Rigidbody2D / Collider2D</li>
-              <li>Tilemap / Raycast</li>
-              <li>Input System</li>
-              <li>UI（ゲージ / ボタン / 遷移）</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>Tools</h3>
-            <ul class="list">
-              <li>Visual Studio</li>
-              <li>Git / GitHub（基本操作）</li>
-              <li>Unity Build / デバッグ対応</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Works -->
-    <section class="section" id="works">
-      <div class="container">
-        <div class="section__head">
-          <h2>Works</h2>
-        </div>
-        <!-- Work 04 -->
-        <article class="work">
-          <div class="work__media" aria-label="作品の画像/動画">
-            <div class="media__placeholder">
-              <img
-              src="./img/NyoiBoxSN (1).png"
-              class="work__img"
-              /><!--画像貼るとこ-->
-            </div>
-          </div>
-
-          <div class="work__body">
-            <div class="work__top">
-              <h3 class="work__title">NyoiBox（Unity）</h3>
-              
-            </div>
-            <div class="work__cols">
-              <div>
-                <h4>Approach</h4>
-                <ul class="list">
-                  <li>SpriteのBoundsから四隅のワールド座標を取得</li>
-                  <li>各点でOverlapPoint / Tile判定を実行</li>
-                  <li>1点でも重なっていればヒット扱い</li>
-                  <li>条件成立時にオブジェクトを削除</li>
-                </ul>
-              </div>
-              <div>
-                <h4>Purpose</h4>
-                <ul class="list">
-                  <li>当たり判定の仕組み理解</li>
-                  <li>Collider依存を避けた制御</li>
-                  <li>処理の軽量化・明示的判定</li>
-                </ul>
-              </div>
-              <div class="work__links">
-                  <a class="btn btn--small btn--ghost" href="./Movie/NyoiBox紹介動画.mp4" target="_blank" rel="noreferrer">Play / Movie</a>
-                </div>
-            </div>
+        <article class="project" id="nyoibox">
+          <div class="project__image project__image--center"><img src="./assets/img/nyoibox.png" alt="NyoiBoxのタイトル画像" loading="lazy" width="1531" height="750"></div>
+          <div class="project__details">
+            <div class="project__label"><span>PROJECT 01</span><span class="status status--done">Unity / C#</span></div>
+            <h3>NyoiBox</h3>
+            <p class="project__summary">Spriteの四隅を使った座標判定に取り組んだ作品。衝突判定を自分で組み立てることで、ゲーム内のオブジェクト判定を制御しています。</p>
+            <div class="tag-list"><span>2D</span><span>OverlapPoint</span><span>Tilemap</span></div>
+            <div class="project__features"><h4>IMPLEMENTATION</h4><ul><li>SpriteのBoundsから四隅のワールド座標を取得</li><li>各点にOverlapPoint / Tile判定を実行</li><li>条件に応じたヒット判定とオブジェクト削除</li></ul></div>
+            <a class="button button--play" href="./assets/video/nyoibox.mp4" data-video="./assets/video/nyoibox.mp4" data-poster="./assets/img/nyoibox.png" data-title="NyoiBox 紹介動画">▶ <span>デモ動画を見る</span> <span aria-hidden="true">↗</span></a>
           </div>
         </article>
 
-        <article class="work">
-          <div class="work__media" aria-label="作品の画像/動画">
-            <div class="work__media work__media--two">
-              <img
-              src="./img/TPimg.png"
-              class="work__img"
-              />
-              <img
-              src="./img/TPimg2.png"
-              class="work__img"
-              />
-            </div>
-            </div>
-          </div>
-
-          <div class="work__body">
-            <div class="work__top">
-              <h3 class="work__title">telepOrtatiOn（Unity）</h3>
-              <!--<span class="tag tag--sub">Sub</span>-->
-            </div>
-
-            <p class="work__desc">
-              Raycastを用いた判定処理とTilemap連携を用いて、ギミック要素を実装しました。
-              処理の責務分離と、Inspectorでの設定しやすさを意識しています。
-            </p>
-
-            <div class="work__cols">
-              <div>
-                <h4>Tech</h4>
-                <ul class="list">
-                  <li>Raycastで衝突検知</li>
-                  <li>Tilemap参照 / LayerMask運用</li>
-                  <li>パラメータをSerializeFieldで調整可能に</li>
-                </ul>
-              </div>
-              <div>
-                <h4>Role / Period</h4>
-                <ul class="list">
-                  <li>チーム制作</li>
-                  <li>期間：3ヶ月</li>
-                  <li>担当：実装 / デバッグ</li>
-                </ul>
-              </div>
-              <a class="btn btn--small btn--ghost" href="./Movie/ゲーム本編流れ動画.mp4" target="_blank" rel="noreferrer">Play / Movie</a>
-            </div>
-          </div>
-        </article>
-        <!-- Works 01 -->
-        <article class="work">
-          <div class="work__media" aria-label="作品の画像/動画">
-            <!-- 画像 or GIF を置く（例: ./assets/work1.gif） -->
-            <div class="media__placeholder">
-              <img
-              src="./img/CardGameImg.png"
-              class="work__img"
-              />
-            </div>
-          </div>
-
-          <div class="work__body">
-            <div class="work__top">
-              <h3 class="work__title">Dungeon Cards（Unity）</h3>
-              <!--<span class="tag">Main</span>-->
-            </div>
-
-            <p class="work__desc">
-              攻撃・回避・回復・カード使用を組み合わせたターン制カードゲームを制作しています。
-              拡張しやすい設計を意識し、インターフェースを用いた実装を行っています。
-            </p>
-
-            <div class="work__cols">
-              <div>
-                <h4>Design / Tech</h4>
-                <ul class="list">
-                  <li>カード効果をインターフェースで共通化</li>
-                  <li>プレイヤーフェーズ / 敵フェーズの分離</li>
-                  <li>デッキ・手札・捨て札の管理</li>
-                  <li>将来的なカード追加を考慮した設計</li>
-                </ul>
-              </div>
-              <div>
-                <h4>Status</h4>
-                <ul class="list">
-                  <li>個人制作</li>
-                  <li>状態：制作中</li>
-                  <li>目的：設計力・拡張性の検証</li>
-                </ul>
-              </div>
-            </div>
-
-            
+        <article class="project project--reverse" id="teleportation">
+          <div class="project__image project__image--teleport"><img src="./assets/img/teleportation-2.png" alt="telepOrtatiOnの移動ギミックのゲーム画面" loading="lazy" width="588" height="311"><img class="project__inset" src="./assets/img/teleportation-1.png" alt="スタート地点付近のゲーム画面" loading="lazy" width="257" height="138"></div>
+          <div class="project__details">
+            <div class="project__label"><span>PROJECT 02</span><span class="status status--done">Unity / C#</span></div>
+            <h3>telepOrtatiOn</h3>
+            <p class="project__summary">RaycastとTilemapを使った2Dアクションギミック。判定処理を分け、Inspectorからパラメータを調整しやすい構成を意識しました。</p>
+            <div class="tag-list"><span>Raycast</span><span>Tilemap</span><span>Team Project</span></div>
+            <div class="project__features"><h4>MY ROLE / IMPLEMENTATION</h4><ul><li>Raycastによる衝突検知とLayerMaskの運用</li><li>SerializeFieldでの調整用パラメータ設定</li><li>チーム制作（3か月）で実装・デバッグを担当</li></ul></div>
+            <a class="button button--play" href="./assets/video/teleportation.mp4" data-video="./assets/video/teleportation.mp4" data-poster="./assets/img/teleportation-2.png" data-title="telepOrtatiOn プレイ動画">▶ <span>プレイ動画を見る</span> <span aria-hidden="true">↗</span></a>
           </div>
         </article>
 
-        <!-- Work 02 -->
-        <article class="work">
-          <div class="work__media" aria-label="作品の画像/動画">
-            <!-- 画像 or GIF を置く（例: ./assets/work1.gif） -->
-            <div class="media__placeholder">
-              <img
-              src="./img/stickforestImg.png"
-              class="work__img"
-              />
-            </div>
-          </div>
-
-          <div class="work__body">
-            <div class="work__top">
-              <h3 class="work__title">棒を伸ばして渡る2Dパズルゲーム（Unity）</h3>
-              <!--<span class="tag">sub</span>-->
-            </div>
-
-            <p class="work__desc">
-              ボタン長押しで棒の長さを操作し、対岸に渡る横スクロール型ゲーム。
-              入力タイミングと物理挙動が結果に直結するよう、仕様段階から設計しました。
-            </p>
-
-            <div class="work__cols">
-              <div>
-                <h4>Tech</h4>
-                <ul class="list">
-                  <li>長押し入力で伸縮ループ → 離した瞬間に確定</li>
-                  <li>Rigidbody2Dで棒が倒れる挙動</li>
-                  <li>届かない場合は落下する条件分岐</li>
-                  <li>摩擦/重力を調整してゲーム性に反映</li>
-                </ul>
-              </div>
-              <div>
-                <h4>Role / Period</h4>
-                <ul class="list">
-                  <li>個人制作</li>
-                  <li>期間：</li>
-                  <li>担当：仕様 / 実装 / UI / 調整</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="work__links">
-              <a class="btn btn--small btn--ghost" href="#" target="_blank" rel="noreferrer">Play / Movie</a>
-            </div>
+        <article class="project" id="dungeon-cards">
+          <div class="project__image"><img src="./assets/img/dungeon-cards.png" alt="Dungeon Cardsの戦闘画面のイメージ。カード3枚とコマンドが表示されている" loading="lazy" width="1536" height="1024"></div>
+          <div class="project__details">
+            <div class="project__label"><span>PROJECT 03</span><span class="status status--progress">制作中</span></div>
+            <h3>Dungeon Cards</h3>
+            <p class="project__summary">攻撃・回避・回復・カード使用を組み合わせたターン制カードゲーム。効果の追加や変更がしやすい設計を目指して制作しています。</p>
+            <div class="tag-list"><span>Unity / C#</span><span>Interface</span><span>Turn-based</span></div>
+            <div class="project__features"><h4>DESIGN / IMPLEMENTATION</h4><ul><li>カード効果の共通処理をインターフェースで設計</li><li>プレイヤーと敵の行動フェーズを分離</li><li>デッキ・手札・捨て札の管理、手札UI</li></ul></div>
           </div>
         </article>
 
-        <!-- Work 03 -->
-        
+        <article class="project project--reverse" id="stickforest">
+          <div class="project__image project__image--pixel"><img src="./assets/img/stickforest.png" alt="森の背景と丸太の上に立つキャラクターの2Dゲーム画面" loading="lazy" width="346" height="170"></div>
+          <div class="project__details">
+            <div class="project__label"><span>PROJECT 04</span><span class="status status--done">Unity / C#</span></div>
+            <h3>棒橋パズルゲーム</h3>
+            <p class="project__summary">長押しで棒の長さを調整し、離すと棒が倒れる2Dゲーム。入力タイミングと物理挙動が結果に直結するよう設計しました。</p>
+            <div class="tag-list"><span>2D Physics</span><span>Input System</span><span>UI</span></div>
+            <div class="project__features"><h4>IMPLEMENTATION</h4><ul><li>押している間に棒を伸縮し、離した長さを確定</li><li>Rigidbody2Dによる棒の転倒・落下挙動</li><li>使用可能な棒の長さをゲージで表示</li></ul></div>
+          </div>
+        </article>
+
+        <article class="project" id="liminalcleaner">
+          <div class="project__image project__image--architecture" role="img" aria-label="LiminalCleanerの技術構成。Unreal Engine 5のC++ゲームクライアントとGo WebSocketサーバーが通信する開発構成">
+            <div class="architecture"><p class="architecture__overline">IN DEVELOPMENT / NETWORK ARCHITECTURE</p><div class="architecture__nodes"><div><strong>UNREAL<br>ENGINE 5</strong><small>Game Client / C++</small></div><span class="architecture__link" aria-hidden="true">⇄<small>WebSocket</small></span><div><strong>Go<br>SERVER</strong><small>Room &amp; State / Go</small></div></div><p class="architecture__foot">Cleaning System · Multiplayer Prototype</p></div>
+          </div>
+          <div class="project__details">
+            <div class="project__label"><span>PROJECT 05</span><span class="status status--progress">開発中</span></div>
+            <h3>LiminalCleaner</h3>
+            <p class="project__summary">複数人でステージを洗浄するゲーム。UE5のゲーム処理にGoのサーバーを組み合わせ、マルチプレイを目指して開発しています。</p>
+            <div class="tag-list"><span>UE5 / C++</span><span>Go</span><span>WebSocket</span></div>
+            <div class="project__features"><h4>CURRENT PROGRESS</h4><ul><li>Render Targetとブラシを使う洗浄処理</li><li>UE5クライアントとGoサーバーの接続検証</li><li>部屋管理・進行状況共有をGo側で扱う構成を検討</li></ul></div>
+            <p class="project__note">※ マルチプレイ機能は開発途中です。</p>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- Policy -->
-    <section class="section" id="policy">
-      <div class="container">
-        <div class="section__head">
-          <h2>Development Policy</h2>
-        </div>
-
-        <div class="panel">
-          <ul class="list">
-            <li>実装前に仕様を整理し、例外ケースを想定してから着手します。</li>
-            <li>不具合は再現条件を固定し、ログ出力やInspectorで原因を切り分けます。</li>
-            <li>調整しやすいように、SerializeFieldでパラメータ化することを意識しています。</li>
-          </ul>
+    <section id="skills" class="section section--skills">
+      <div class="wrap">
+        <div class="section-heading"><div><p class="section-kicker">02 — TECHNICAL SKILLS</p><h2>使用技術<span class="accent">.</span></h2></div><p>ゲーム制作で触れてきた<br>技術・開発環境です。</p></div>
+        <div class="skills-grid">
+          <div class="skill-card"><span class="skill-card__index">01 / LANGUAGES</span><h3>プログラミング言語</h3><p>C# <span>Unityでのゲーム開発</span></p><p>C++ <span>UE5・基礎プログラミング</span></p><p>Go <span>WebSocketサーバー開発</span></p></div>
+          <div class="skill-card"><span class="skill-card__index">02 / ENGINES</span><h3>ゲームエンジン・実装</h3><p>Unity <span>2D Physics / UI / Input System</span></p><p>Unreal Engine 5 <span>C++ / Render Target</span></p><p>Gameplay <span>Raycast / Tilemap / Collision</span></p></div>
+          <div class="skill-card"><span class="skill-card__index">03 / TOOLS</span><h3>開発ツール</h3><p>Visual Studio <span>実装・デバッグ</span></p><p>Git / GitHub <span>基本操作</span></p><p>Perforce (P4V) <span>ファイル管理・共同開発</span></p></div>
         </div>
       </div>
     </section>
 
-    <!-- Links 
-    <section class="section" id="links">
-      <div class="container">
-        <div class="section__head">
-          <h2>Links</h2>
-        </div>
-
-        <div class="grid grid--2">
-          <div class="card">
-            <h3>GitHub</h3>
-            <a class="btn btn--small" href="#" target="_blank" rel="noreferrer"></a>
-          </div>
-
-          <div class="card">
-            <h3>Contact</h3>
-            <p class="muted">メール or フォームどちらでもOK。</p>
-            <ul class="list">
-              <li>Email:<a href="yuity0804@gmail.com">yuity0804@gmail.com</a></li>
-              <li>X():<a href="#" target="_blank" rel="noreferrer"></a></li>
-            </ul>
-          </div>
-        </div>
+    <section id="about" class="section section--about">
+      <div class="wrap about-grid">
+        <div><p class="section-kicker">03 — ABOUT ME</p><h2>実装の意図まで、<br>説明できる開発を<span class="accent">.</span></h2><p class="about__lead">佐藤 結叶（Sato Yuito）<br>ゲームプログラマ志望</p></div>
+        <div class="about__content"><p>Unityを中心に、個人制作とチーム制作の両方に取り組んできました。単に動くものを作るだけでなく、「なぜその判定・設計にしたのか」を考えることを大切にしています。</p><div class="approach"><span>01</span><div><strong>設計</strong><p>仕様と例外ケースを整理してから実装する。</p></div></div><div class="approach"><span>02</span><div><strong>実装</strong><p>責務を分け、調整・拡張しやすいコードを目指す。</p></div></div><div class="approach"><span>03</span><div><strong>改善</strong><p>ログや実機で再現条件を確かめ、原因を切り分ける。</p></div></div></div>
       </div>
     </section>
-  -->
-
   </main>
 
-  <footer class="footer">
-    <div class="container footer__inner">
-      <small>© <span id="year"></span> RISHE</small>
-    </div>
-  </footer>
+  <footer class="site-footer"><div class="wrap site-footer__inner"><span class="site-logo__symbol">YS<span class="accent">.</span></span><p>© <span id="year">2026</span> Yuito Sato. All rights reserved.</p><a href="#top">BACK TO TOP ↑</a></div></footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <dialog id="video-dialog" class="video-dialog" aria-labelledby="video-dialog-title">
+    <div class="video-dialog__top"><h2 id="video-dialog-title">デモ動画</h2><button id="video-close" class="video-dialog__close" type="button" aria-label="動画を閉じる">✕</button></div>
+    <video id="video-player" controls playsinline preload="none">お使いのブラウザは動画再生に対応していません。</video>
+    <p class="video-dialog__hint">読み込みまで少し時間がかかる場合があります。画面外をクリックするかEscキーでも閉じられます。</p>
+  </dialog>
 </body>
 </html>
